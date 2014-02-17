@@ -1,5 +1,6 @@
-package com.iam42.imageUploader;
+package com.iam42.imageUploader.Activity;
 
+import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.app.ActionBar;
 import android.support.v4.app.Fragment;
@@ -10,6 +11,8 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.os.Build;
+
+import com.iam42.imageUploader.R;
 
 public class MainActivity extends ActionBarActivity {
 
@@ -41,6 +44,8 @@ public class MainActivity extends ActionBarActivity {
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
         if (id == R.id.action_settings) {
+            Intent intent = new Intent(this, ImageUploadActivity.class);
+            startActivity(intent);
             return true;
         }
         return super.onOptionsItemSelected(item);
